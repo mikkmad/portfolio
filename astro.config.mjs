@@ -15,7 +15,7 @@ export default defineConfig({
 
   fonts: [{
     provider: fontProviders.fontsource(),
-    name: "Roboto",
-    cssVariable: "--font-roboto",
+    name: "JetBrains Mono",
+    cssVariable: "--font-jetbrains-mono",
   }]
 });

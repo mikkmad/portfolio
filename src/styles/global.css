@@ -12,5 +12,5 @@
 }
 
 @theme inline {
-    --font-sans: var(--font-roboto);
+    --font-sans: var(--font-jetbrains-mono);
 }

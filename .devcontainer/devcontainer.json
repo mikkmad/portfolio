@@ -13,7 +13,8 @@
       "extensions": [
         "astro-build.astro-vscode",
         "esbenp.prettier-vscode",
-        "bradlc.vscode-tailwindcss"
+        "bradlc.vscode-tailwindcss",
+        "google.google-antigravity"
       ],
       "settings": {
         "[astro]": {

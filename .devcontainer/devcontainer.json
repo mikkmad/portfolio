@@ -12,7 +12,8 @@
     "vscode": {
       "extensions": [
         "astro-build.astro-vscode",
-        "esbenp.prettier-vscode"
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss"
       ],
       "settings": {
         "[astro]": {

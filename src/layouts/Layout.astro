@@ -1,6 +1,17 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import "../styles/global.css";
+import background from "../assets/background.svg";
+
+import { Font } from "astro:assets";
+
+// For controlling the page title.
+interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props;
+const pageTitle = title ? `Portfolio - ${title}` : "Portfolio";
 ---
 
 <!doctype html>
@@ -11,9 +22,16 @@ import "../styles/global.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
+    <Font cssVariable="--font-roboto" preload />
+    <title>{pageTitle}</title>
   </head>
-  <body>
+  <body class="font-sans antialiased">
+    <img
+      id="background"
+      src={background.src}
+      alt="Background"
+      fetchpriority="high"
+    />
     <Navbar />
     <slot />
   </body>

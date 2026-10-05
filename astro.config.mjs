@@ -17,5 +17,10 @@ export default defineConfig({
     provider: fontProviders.fontsource(),
     name: "JetBrains Mono",
     cssVariable: "--font-jetbrains-mono",
-  }]
+  }],
+  
+  server: {
+        host: "0.0.0.0",
+        port: 4321,
+    }
 });

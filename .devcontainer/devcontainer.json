@@ -1,19 +1,23 @@
 {
   "name": "Astro Portfolio",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+
   "forwardPorts": [4321],
+
   "portsAttributes": {
     "4321": {
       "label": "Astro Dev Server",
-      "onAutoForward": "notify"
+      "onAutoForward": "openBrowser"
     }
   },
+
+  "postCreateCommand": "npm ci",
+
   "customizations": {
     "vscode": {
       "extensions": [
         "astro-build.astro-vscode",
         "esbenp.prettier-vscode",
-        "bradlc.vscode-tailwindcss",
         "google.google-antigravity"
       ],
       "settings": {

@@ -1,23 +1,47 @@
+---
+import Navbar from "../components/Navbar.astro";
+import "../styles/global.css";
+import background from "../assets/background.svg";
+
+import { Font } from "astro:assets";
+
+// For controlling the page title.
+interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props;
+const pageTitle = title ? `Portfolio - ${title}` : "Portfolio";
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <Font cssVariable="--font-jetbrains-mono" preload />
+    <title>{pageTitle}</title>
+  </head>
+  <body class="font-sans antialiased">
+    <img
+      id="background"
+      src={background.src}
+      alt="Background"
+      fetchpriority="high"
+    />
+    <Navbar />
+    <slot />
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
 </style>
